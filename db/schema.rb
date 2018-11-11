@@ -14,7 +14,8 @@ ActiveRecord::Schema.define(version: 2018_11_11_201803) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "yelpNumber"
-    t.string "UserId"
+    t.string "user_id"
+    t.boolean "allow_unauth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

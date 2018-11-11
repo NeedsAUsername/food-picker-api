@@ -1,4 +1,4 @@
-class API::UsersController < ApplicationController
+class Api::UsersController < ApplicationController
   before_action :authenticate_user # method provided by Knock::Authenticable
 
   def current

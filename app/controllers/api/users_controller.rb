@@ -1,9 +1,8 @@
 class Api::UsersController < ApplicationController
-  # authenticate_user method provided by Knock::Authenticable
   before_action :authenticate_user, except: [:test]
 
   def current
-    render json: current_user # method provided by Knock
+    render json: current_user
   end
 
   # Just to see if the json is being rendered correctly

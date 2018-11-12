@@ -5,7 +5,9 @@ ruby '2.5.1'
 
 gem 'active_model_serializers', '~> 0.10.0'
 
-# For user token authentication
+gem 'devise-jwt'
+gem 'pry'
+# For user token authentication-
 gem 'knock'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

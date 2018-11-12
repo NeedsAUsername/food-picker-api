@@ -1,4 +1,4 @@
-class Api::UsersController < ApplicationController
+class V1::UsersController < ApplicationController
   before_action :authenticate_user, except: [:test]
 
   def current

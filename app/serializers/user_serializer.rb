@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email
+  attributes :id, :email, :authentication_token
   has_many :restaurants
 
   class RestaurantSerializer < ActiveModel::Serializer

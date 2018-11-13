@@ -8,7 +8,6 @@ class V1::UsersController < ApplicationController
 
   # Just to see if the json is being rendered correctly
   def test
-    binding.pry
     @user = User.first
     render json: @user
   end

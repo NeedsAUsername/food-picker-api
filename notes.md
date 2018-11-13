@@ -15,3 +15,12 @@ You might present your login information and ask Server X for a token; and then 
  -it allows the user to stay logged in without the use of cookies.
  -since we are not relying on cookies, we don't need CSRF, or CORS protection
  -https://stackoverflow.com/questions/1592534/what-is-token-based-authentication
+
+
+
+Port Notes
+to see running processes on port
+ lsof -wni tcp:3000
+
+to kill process
+ kill -9 PID

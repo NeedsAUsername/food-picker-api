@@ -1,4 +1,5 @@
 class V1::UsersController < ApplicationController
+  # no longer need a before_action: authenticate_user, because every request from the React frontend will be validated using the header email and token
 
   def current
     # With the correct X-User-Email and X-User-Token in the header of the request, current_user will be set.

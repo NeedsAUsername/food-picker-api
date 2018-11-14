@@ -3,7 +3,7 @@ class V1::UsersController < ApplicationController
 
   def current
     # With the correct X-User-Email and X-User-Token in the header of the request, current_user will be set.
-    # Otherwise, current_user will be nil.
+    # Otherwise, current_user will be nil. 
     render json: current_user
   end
 

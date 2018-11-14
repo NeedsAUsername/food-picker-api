@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     get '/users/test' => 'users#test' #just a test route
 
     post '/sessions' => 'sessions#create' #login
+    delete '/sessions' => 'sessions#destroy' #logout 
   end
 end

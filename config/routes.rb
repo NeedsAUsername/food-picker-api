@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
     post '/sessions' => 'sessions#create' #login
     delete '/sessions' => 'sessions#destroy' #logout
+    post '/users' => 'users#create' #signup
 
-    post '/restaurants' => 'restaurants#create' 
+    post '/restaurants' => 'restaurants#create'
   end
 end

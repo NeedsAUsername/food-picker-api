@@ -12,4 +12,22 @@ class V1::UsersController < ApplicationController
     @user = User.first
     render json: @user
   end
+
+  def create
+    if User.find_by(email: params[:email])
+      render json: {status: 'Email taken'}
+    else
+      @user = User.new(user_params)
+      if @user.save
+        render json: @user
+      else
+        render json: {status: 'Error'}
+      end
+    end
+  end
+
+  private
+    def user_params
+      params.permit(:email, :password)
+    end
 end

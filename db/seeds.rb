@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.new(email: 'tester@tester.com', password: 'password')
-user.restaurants.build(yelpNumber: 'example')
+user.restaurants.build(yelpNumber: 'kBZggrnSP1kcUMnsnfkTaQ')
 user.save

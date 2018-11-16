@@ -8,6 +8,7 @@ gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'pry'
 
+gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record

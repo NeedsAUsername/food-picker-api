@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   namespace :v1 do
     get '/users/current' => 'users#current'
-    get '/restaurants' => 'restaurants#index'
 
     get '/users/test' => 'users#test' #just a test route
 
@@ -14,5 +13,6 @@ Rails.application.routes.draw do
     post '/users' => 'users#create' #signup
 
     post '/restaurants' => 'restaurants#create'
+    delete '/restaurants' => 'restaurants#destroy'
   end
 end

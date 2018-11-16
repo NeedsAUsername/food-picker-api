@@ -14,6 +14,10 @@ class V1::RestaurantsController < ApplicationController
     end
   end
 
+  def destroy
+    binding.pry
+  end
+
   private
     def restaurant_params
       params.permit(:restaurantId)

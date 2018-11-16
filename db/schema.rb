@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_11_13_010150) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "restaurants", force: :cascade do |t|
     t.string "yelpNumber"
     t.string "user_id"

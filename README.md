@@ -1,5 +1,5 @@
 # README
-Welcome to the food-picker api
+Welcome to the food-picker api for https://github.com/NeedsAUsername/food-picker.
 
 # Test Route
 /v1/users/test gets the first user\'s json data

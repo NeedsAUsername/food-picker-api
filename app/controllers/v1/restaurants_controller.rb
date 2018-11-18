@@ -15,7 +15,17 @@ class V1::RestaurantsController < ApplicationController
   end
 
   def destroy
-    binding.pry
+    if current_user
+      if @restaurant = current_user.restaurants.find_by(yelpNumber: params[:restaurantId])
+        @restaurant.destroy
+        
+        render json: current_user.restaurants
+      else
+        render json: {status: 'Not found'}
+      end
+    else
+      render json: {status: 'Not logged in'}
+    end
   end
 
   private

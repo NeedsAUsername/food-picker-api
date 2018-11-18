@@ -14,11 +14,14 @@ class StaticController < ApplicationController
     <br>
     /v1/users/current gets the user
     <br>
-    /v1/restaurants gets the user\'s restaurants
     <br>
     post endpoints:
     <br>
     post /v1/users for signing up
+    <br>
+    post /v1/restaurants for creating a new restaurant
+    <br>
+    delete /v1/restaurants for deleting a restaurant
     <br>
     delete /v1/sessions for logging out
     </h1>'.html_safe

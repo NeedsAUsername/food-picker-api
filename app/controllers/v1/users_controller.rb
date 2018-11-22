@@ -8,7 +8,7 @@ class V1::UsersController < ApplicationController
       render json: current_user
     else
       render json: {status: 'Invalid Credentials - check your local storage or log in again'}
-    end 
+    end
   end
 
   # Just to see if the json is being rendered correctly

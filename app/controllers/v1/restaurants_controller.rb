@@ -21,7 +21,7 @@ class V1::RestaurantsController < ApplicationController
     if current_user
       if @restaurant = current_user.restaurants.find_by(yelpNumber: params[:restaurantId])
         @restaurant.destroy
-        render json: current_user.restaurants
+        render json: {restaurantIdDeleted: params[:restaurantId]}
       else
         render json: {status: 'Not found'}
       end

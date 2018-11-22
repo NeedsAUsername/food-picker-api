@@ -5,7 +5,6 @@ class V1::SessionsController < ApplicationController
     if @user && @user.valid_password?(params[:password])
       render json: @user
     else
-      # could also return head(:unauthorized), but easier to just check the status in React reducer
       render json: {status: 'not_authenticated'}
     end
   end

@@ -4,7 +4,11 @@ class V1::UsersController < ApplicationController
   def current
     # With the correct X-User-Email and X-User-Token in the header of the request, current_user will be set.
     # Otherwise, current_user will be nil.
-    render json: current_user
+    if current_user
+      render json: current_user
+    else
+      render json: {status: 'Invalid Credentials - check your local storage or log in again'}
+    end 
   end
 
   # Just to see if the json is being rendered correctly
@@ -21,7 +25,7 @@ class V1::UsersController < ApplicationController
       if @user.save
         render json: @user
       else
-        render json: {status: 'Error'}
+        render json: {status: 'User not created - Check your inputs'}
       end
     end
   end

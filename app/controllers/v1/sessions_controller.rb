@@ -17,10 +17,10 @@ class V1::SessionsController < ApplicationController
       if current_user.save
         head(:ok)
       else
-        head(:internal_server_error)
+        render json: {status: 'error - check sessions#destroy'}
       end
     else
-      head(:unauthorized)
+      render json: {status: 'not_authenticated'}
     end
   end
 

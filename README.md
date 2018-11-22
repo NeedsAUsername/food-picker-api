@@ -5,7 +5,8 @@ Welcome to the food-picker api for https://github.com/NeedsAUsername/food-picker
 /v1/users/test gets the first user\'s json data
 
 # Token Auth
-post /v1/sessions for logging in and receiving auth token \n
+post /v1/sessions for logging in and receiving auth token
+
 subsequent requests require headers: X-User-Token and X-User-Email
 
 # Endpoints

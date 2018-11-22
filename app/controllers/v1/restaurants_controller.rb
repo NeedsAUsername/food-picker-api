@@ -6,8 +6,11 @@ class V1::RestaurantsController < ApplicationController
         render json: {status: 'Already Saved'}
       else
         current_user.restaurants.build(yelpNumber: params[:restaurantId])
-        current_user.save
-        render json: current_user.restaurants
+        if current_user.save
+          render json: current_user.restaurants
+        else
+          render json: {status: 'Failed to save'}
+        end
       end
     else
       render json: {status: 'Not logged in'}
@@ -18,7 +21,6 @@ class V1::RestaurantsController < ApplicationController
     if current_user
       if @restaurant = current_user.restaurants.find_by(yelpNumber: params[:restaurantId])
         @restaurant.destroy
-        
         render json: current_user.restaurants
       else
         render json: {status: 'Not found'}
